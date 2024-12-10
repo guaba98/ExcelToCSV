@@ -14,51 +14,51 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(747, 382)
+        MainWindow.resize(633, 355)
+        MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label_title = QtWidgets.QLabel(self.centralwidget)
-        self.label_title.setGeometry(QtCore.QRect(300, 40, 161, 41))
+        self.label_title.setGeometry(QtCore.QRect(200, 30, 247, 41))
         font = QtGui.QFont()
-        font.setFamily("KoPub돋움체 Bold")
-        font.setPointSize(15)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setFamily("Roboto")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_title.setFont(font)
-        self.label_title.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label_title.setAlignment(QtCore.Qt.AlignCenter)
         self.label_title.setObjectName("label_title")
-        self.lineEdit_csvpath = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_csvpath.setGeometry(QtCore.QRect(190, 110, 321, 31))
-        self.lineEdit_csvpath.setObjectName("lineEdit_csvpath")
         self.label_csvfile = QtWidgets.QLabel(self.centralwidget)
-        self.label_csvfile.setGeometry(QtCore.QRect(130, 120, 56, 12))
+        self.label_csvfile.setGeometry(QtCore.QRect(35, 100, 91, 20))
         font = QtGui.QFont()
-        font.setBold(False)
-        font.setWeight(50)
+        font.setFamily("Roboto")
+        font.setPointSize(10)
         self.label_csvfile.setFont(font)
         self.label_csvfile.setObjectName("label_csvfile")
+        self.lineEdit_csvpath = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_csvpath.setGeometry(QtCore.QRect(140, 90, 321, 31))
+        self.lineEdit_csvpath.setObjectName("lineEdit_csvpath")
         self.btn_csv_search = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_csv_search.setGeometry(QtCore.QRect(520, 110, 91, 31))
+        self.btn_csv_search.setGeometry(QtCore.QRect(470, 90, 91, 31))
         self.btn_csv_search.setObjectName("btn_csv_search")
         self.label_savepath = QtWidgets.QLabel(self.centralwidget)
-        self.label_savepath.setGeometry(QtCore.QRect(100, 170, 91, 20))
+        self.label_savepath.setGeometry(QtCore.QRect(70, 170, 51, 20))
         self.label_savepath.setObjectName("label_savepath")
         self.lineEdit_savepath = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_savepath.setGeometry(QtCore.QRect(190, 160, 321, 31))
+        self.lineEdit_savepath.setGeometry(QtCore.QRect(140, 160, 321, 31))
         self.lineEdit_savepath.setObjectName("lineEdit_savepath")
         self.btn_savefile_search = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_savefile_search.setGeometry(QtCore.QRect(520, 160, 91, 31))
+        self.btn_savefile_search.setGeometry(QtCore.QRect(470, 160, 91, 31))
         self.btn_savefile_search.setObjectName("btn_savefile_search")
-        self.check_rmv_header = QtWidgets.QCheckBox(self.centralwidget)
-        self.check_rmv_header.setGeometry(QtCore.QRect(240, 210, 131, 16))
-        self.check_rmv_header.setObjectName("check_rmv_header")
         self.btn_convert = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_convert.setGeometry(QtCore.QRect(240, 250, 211, 41))
+        self.btn_convert.setGeometry(QtCore.QRect(210, 240, 211, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.btn_convert.setFont(font)
         self.btn_convert.setObjectName("btn_convert")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 747, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 633, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -71,10 +71,41 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_title.setText(_translate("MainWindow", "Exel to CSV"))
-        self.label_csvfile.setText(_translate("MainWindow", "csv 파일"))
+        self.label_title.setText(_translate("MainWindow", "Excel to CSV"))
+        self.label_csvfile.setText(_translate("MainWindow", "CSV 파일 선택"))
+        self.lineEdit_csvpath.setPlaceholderText(_translate("MainWindow", "CSV 파일을 선택하세요."))
+        self.btn_csv_search.setStyleSheet(_translate("MainWindow", "\n"
+"      QPushButton {\n"
+"        background-color: #3498db;\n"
+"        color: white;\n"
+"        border-radius: 5px;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"        background-color: #2980b9;\n"
+"      }\n"
+"     "))
         self.btn_csv_search.setText(_translate("MainWindow", "찾기"))
-        self.label_savepath.setText(_translate("MainWindow", "파일 저장 경로"))
+        self.label_savepath.setText(_translate("MainWindow", "저장 경로"))
+        self.lineEdit_savepath.setPlaceholderText(_translate("MainWindow", "저장 경로를 입력하세요."))
+        self.btn_savefile_search.setStyleSheet(_translate("MainWindow", "\n"
+"      QPushButton {\n"
+"        background-color: #3498db;\n"
+"        color: white;\n"
+"        border-radius: 5px;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"        background-color: #2980b9;\n"
+"      }\n"
+"     "))
         self.btn_savefile_search.setText(_translate("MainWindow", "찾기"))
-        self.check_rmv_header.setText(_translate("MainWindow", "첫 헤더 지우기"))
-        self.btn_convert.setText(_translate("MainWindow", "변환하기"))
+        self.btn_convert.setStyleSheet(_translate("MainWindow", "\n"
+"      QPushButton {\n"
+"        background-color: #2ecc71;\n"
+"        color: white;\n"
+"        border-radius: 5px;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"        background-color: #27ae60;\n"
+"      }\n"
+"     "))
+        self.btn_convert.setText(_translate("MainWindow", "변환"))

@@ -2,7 +2,7 @@
 Convert Excel to CSV File
 엑셀을 형식에 맞게 CSV 변환하는 기능(전극팀 지원)
 
-### [💾파일 다운받기](https://docs.google.com/uc?export=download&id=1qSpVtpvEOuZo05Lr0qYS7DkTZ3jaZVR-)
+### [💾 파일 다운받기](https://docs.google.com/uc?export=download&id=1qSpVtpvEOuZo05Lr0qYS7DkTZ3jaZVR-)
 
 ### 📋 변환 방식
 1. 헤더 제거

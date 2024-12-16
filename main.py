@@ -84,7 +84,6 @@ class MyWindow(QMainWindow):
                 df.to_csv(save_file_path, index=False, header=False, encoding='utf-8-sig')
 
                 cnt += 1
-                # 성공 메시지
 
 
             except FileNotFoundError:
@@ -99,7 +98,7 @@ class MyWindow(QMainWindow):
                 # 다른 일반적인 오류 처리
                 QMessageBox.critical(self, "오류", f"파일 변환 중 오류가 발생했습니다: {e}")
 
-            # 모든 파일 변환 후 성공 메시지
+        # 모든 파일 변환 후 성공 메시지
         if cnt > 0:
             QMessageBox.information(self, "성공", f"{cnt} 개 파일이 성공적으로 저장되었습니다")
         else:

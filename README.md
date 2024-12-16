@@ -2,6 +2,9 @@
 Convert Excel to CSV File
 엑셀을 형식에 맞게 CSV 변환하는 기능(전극팀 지원)
 
+### [💾파일 다운받기](https://docs.google.com/uc?export=download&id=1qSpVtpvEOuZo05Lr0qYS7DkTZ3jaZVR-)
+
+### 📋 변환 방식
 1. 헤더 제거
 2. 첫 번째 열을 날짜로 변환 후 원하는 형식으로 변환(%Y%m%d%H%M)
 3. 오늘 날짜 형식으로 저장 파일 생성
